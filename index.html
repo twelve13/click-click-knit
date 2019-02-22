@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="knittingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Click Click Knit</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body ng-controller="knittingController as vm">
+    <main>
+        <div class="pattern-row" ng-class="{checked: isChecked}" ng-repeat ="row in nightingale | reverse">
+            <span class="box" ng-class="box.stitch" ng-repeat = "box in row.pattern track by $index" ng-mousedown="startCount($index)" ng-mouseup="stopCount($index)">{{box.value}}</span><input type="checkbox" ng-model="isChecked">
+        </div>
+        <div id="count">Number of stitches selected: {{count}}</div>
+    </main>
+</body>
+</html>
