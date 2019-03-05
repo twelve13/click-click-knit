@@ -1,198 +1,507 @@
 body {
-    counter-reset: my-sec-counter 45; /*set to one more than total number of rows*/
-    display: flex;
-    justify-content: center;
+
+                counter-reset: my-sec-counter 81; /*set to one more than total number of rows*/
+
+                display: flex;
+
+                justify-content: center;
+
 }
 
- main {
-    width: 1500px;
+ 
+
+main {
+
+                width: 1500px;
+
 }
+
+ 
 
 .pattern-row::after {
-    color: gray;
-    counter-increment: my-sec-counter -1;
-    content: counter(my-sec-counter);
-    font-size: 12px;
+
+                color: gray;
+
+                counter-increment: my-sec-counter -1;
+
+                content: counter(my-sec-counter);
+
+                font-size: 12px;
+
 }
+
+ 
 
 .box {
-    border: solid 1px gray;
-    border-left: none;
-    display: inline-block;
-    font-size: 16px;
-    height: 18px;
-    text-align: center;
-    vertical-align: top; /*default for display: inline-block is baseline which messes up alignment of boxes*/
-    width: 18px;
+
+                border: solid 1px gray;
+
+                border-left: none;
+
+                display: inline-block;
+
+                font-size: 16px;
+
+                height: 18px;
+
+                text-align: center;
+
+                vertical-align: top; /*default for display: inline-block is baseline which messes up alignment of boxes*/
+
+                width: 18px;
+
 }
+
+ 
 
 .box:first-of-type {
-    border-left: solid 1px gray;
+
+                border-left: solid 1px gray;
+
 }
+
+ 
 
 .box:hover {
-    background-color: #eaff00;
+
+                background-color: #eaff00;
+
 }
+
+ 
 
 .box:hover::after {
-    background-color: #00ffb3;
-    border-radius: 10px;
-    bottom: 60px;
-    display: block;
-    left: 15px;
-    padding: 5px;
-    position: relative;
-    width: 100px;
+
+                background-color: #00ffb3;
+
+                border-radius: 10px;
+
+                bottom: 60px;
+
+                display: block;
+
+                left: 15px;
+
+                padding: 5px;
+
+                position: relative;
+
+                width: 100px;
+
 }
+
+ 
 
 .pattern-row:nth-of-type(odd) .knit:hover::after {
-    content: "knit";
+
+                content: "knit";
+
 }
+
+ 
 
 .pattern-row:nth-of-type(even) .knit:hover::after {
-    content: "purl";
+
+                content: "purl";
+
 }
+
+ 
 
 .pattern-row:nth-of-type(odd) .purl:hover::after {
-    content: "purl";
+
+                content: "purl";
+
 }
+
+ 
 
 .pattern-row:nth-of-type(even) .purl:hover::after {
-    content: "knit";
+
+                content: "knit";
+
 }
+
+ 
 
 .pattern-row:nth-of-type(odd) .knit-back:hover::after {
-    content: "knit through back";
+
+                content: "knit through back";
+
 }
+
+ 
 
 .pattern-row:nth-of-type(even) .knit-back:hover::after {
-    content: "purl through back";
+
+                content: "purl through back";
+
 }
+
+ 
 
 .rc11:hover::after {
-    content: "slip 1, back, k1, k1";
+
+                content: "slip 1, back, k1, k1";
+
 }
+
+ 
 
 .lc11:hover::after {
-    content: "slip 1, front, k1, k1";
+
+                content: "slip 1, front, k1, k1";
+
 }
+
+ 
 
 .rpc11:hover::after {
-    content: "slip 1, back, k1, p1";
+
+                content: "slip 1, back, k1, p1";
+
 }
+
+ 
 
 .lpc11:hover::after {
-    content: "slip 1, front, p1, k1";
+
+                content: "slip 1, front, p1, k1";
+
 }
+
+ 
+
+.rc12:hover::after {
+
+                content: "slip 2, back, k1, k2";
+
+}
+
+ 
+
+.lc12:hover::after {
+
+                content: "slip 1, front, k2, k1";
+
+}
+
+ 
+
+.rpc12:hover::after {
+
+                content: "slip 2, back, k1, p2";
+
+}
+
+ 
+
+.lpc12:hover::after {
+
+                content: "slip 1, front, p2, k1";
+
+}
+
+ 
 
 .rc21:hover::after {
-    content: "slip 1, back, k2, k1";
+
+                content: "slip 1, back, k2, k1";
+
 }
+
+ 
 
 .lc21:hover::after {
-    content: "slip 2, front, k1, k2";
+
+                content: "slip 2, front, k1, k2";
+
 }
+
+ 
 
 .rpc21:hover::after {
-    content: "slip 1, back, k2, p1";
+
+                content: "slip 1, back, k2, p1";
+
 }
+
+ 
 
 .lpc21:hover::after {
-    content: "slip 2, front, p1, k2";   
+
+                content: "slip 2, front, p1, k2";   
+
 }
+
+ 
+
+.rc22:hover::after {
+
+                content: "slip 2, back, k2, k2";
+
+}
+
+ 
+
+.lc22:hover::after {
+
+                content: "slip 2, front, k2, k2";
+
+}
+
+ 
+
+.rpc22:hover::after {
+
+                content: "slip 2, back, k2, p2";
+
+}
+
+ 
+
+.lpc22:hover::after {
+
+                content: "slip 2, front, p2, k2";
+
+}
+
+ 
+
+.rpc23:hover::after {
+
+                content: "slip 3, back, k2, p3";
+
+}
+
+ 
+
+.lpc23:hover::after {
+
+                content: "slip 2, front, p3, k2";
+
+}
+
+ 
+
+.rpc13:hover::after {
+
+                content: "slip 3, back, k1, p3";
+
+}
+
+ 
+
+.lpc13:hover::after {
+
+                content: "slip 1, front, p3, k1";
+
+}
+
+ 
 
 .rc31:hover::after {
-    content: "slip 1, back, k3, k1";
+
+                content: "slip 1, back, k3, k1";
+
 }
+
+ 
 
 .lc31:hover::after {
-    content: "slip 3, front, k1, k3";
+
+                content: "slip 3, front, k1, k3";
+
 }
+
+ 
+
+.rc13:hover::after {
+
+                content: "slip 3, back, k1, k3";
+
+}
+
+ 
+
+.lc13:hover::after {
+
+                content: "slip 1, front, k3, k1";
+
+}
+
+ 
 
 .rpc31:hover::after {
-    content: "slip 1, back, k3, p1";
+
+                content: "slip 1, back, k3, p1";
+
 }
+
+ 
 
 .lpc31:hover::after {
-    content: "slip 3, front, p1, k3";
+
+                content: "slip 3, front, p1, k3";
+
 }
+
+ 
 
 .rpc32:hover::after {
-    content: "slip 2, back, k3, p2";
+
+                content: "slip 2, back, k3, p2";
+
 }
+
+ 
 
 .lpc32:hover::after {
-    content: "slip 3, front, p2, k3";
+
+                content: "slip 3, front, p2, k3";
+
 }
+
+ 
 
 .rpc33:hover::after {
-    content: "slip 3, back, k3, p3";
+
+                content: "slip 3, back, k3, p3";
+
 }
+
+ 
 
 .lpc33:hover::after {
-    content: "slip 3, front, p3, k3";
+
+                content: "slip 3, front, p3, k3";
+
 }
+
+ 
 
 .rc41:hover::after {
-    content: "slip 1, back, k4, k1";
+
+                content: "slip 1, back, k4, k1";
+
 }
+
+ 
 
 .lc41:hover::after {
-    content: "slip 4, front, k1, k4";
+
+                content: "slip 4, front, k1, k4";
+
 }
+
+ 
 
 .rpc41:hover::after {
-    content: "slip 1, back, k4, p1";
+
+                content: "slip 1, back, k4, p1";
+
 }
+
+ 
 
 .lpc41:hover::after {
-    content: "slip 4, front, p1, k4";
+
+                content: "slip 4, front, p1, k4";
+
 }
+
+ 
 
 .rc42:hover::after {
-    content: "slip 2, back, k4, k2";
+
+                content: "slip 2, back, k4, k2";
+
 }
+
+ 
 
 .lc42:hover::after {
-    content: "slip 4, front, k2, k4";
+
+                content: "slip 4, front, k2, k4";
+
 }
+
+ 
 
 .rc43:hover::after {
-    content: "slip 3, back, k4, k3";
+
+                content: "slip 3, back, k4, k3";
+
 }
+
+ 
 
 .lc43:hover::after {
-    content: "slip 4, front, k3, k4";
+
+                content: "slip 4, front, k3, k4";
+
 }
+
+ 
 
 .rpc43:hover::after {
-    content: "slip 3, back, k4, p3";
+
+                content: "slip 3, back, k4, p3";
+
 }
+
+ 
 
 .lpc42:hover::after {
-    content: "slip 4, front, p2, k4";
+
+                content: "slip 4, front, p2, k4";
+
 }
+
+ 
 
 .rpc42:hover::after {
-    content: "slip 2, back, k4, p2";
+
+                content: "slip 2, back, k4, p2";
+
 }
+
+ 
 
 .lpc43:hover::after {
-    content: "slip 4, front, p3, k4";
+
+                content: "slip 4, front, p3, k4";
+
 }
+
+ 
 
 .rpc414:hover::after {
-    content: "slip 5, back, k4, slip left-most st from cable needle to LH needle, p1, k4 from needle";
+
+                content: "slip 5, back, k4, slip left-most st from cable needle to LH needle, p1, k4 from needle";
+
 }
+
+ 
 
 .lpc414:hover::after {
-    content: "slip 5, front, k4, slip left-most st from cable needle to LH needle, p1, k4 from needle";
+
+                content: "slip 5, front, k4, slip left-most st from cable needle to LH needle, p1, k4 from needle";
+
 }
+
+ 
 
 .checked {
-    background-color: silver;
+
+                background-color: silver;
+
 }
 
+ 
+
 #count {
-    margin-top: 10px;
+
+                margin-top: 10px;
+
 }
