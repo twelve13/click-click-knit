@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Click Click Knit</title>
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Libre+Franklin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="script.js"></script>
@@ -12,10 +12,25 @@
 
 <body ng-controller="knittingController as vm">
     <main>
-        <div class="pattern-row" ng-class="{checked: isChecked}" ng-repeat ="row in nightingale | reverse">
-            <span class="box" ng-class="box.stitch" ng-repeat = "box in row.pattern track by $index" ng-mousedown="startCount($index)" ng-mouseup="stopCount($index)">{{box.value}}</span><input type="checkbox" ng-model="isChecked">
+        <div id="instructions">
+            <div id="close">X</div>
+            <p>A Tool To Help Read Knitting Patterns</p>
+            <ul>
+                <li>Check off each row as you complete it</li>
+                <li>Hover over a symbol to display the stitch</li>
+                <li>Click and drag across squares to display the number of stitches selected (displayed at the top of the page)</li>
+            </ul>
         </div>
-        <div id="count">Number of stitches selected: {{count}}</div>
+        <header>
+            <div id="title">Click Click Knit</div>
+            <div id="count">Number of stitches selected: {{count}}</div>
+        </header>
+        <div id="pattern-container">
+            <div id="end">end of pattern</div>
+            <div class="pattern-row" ng-class="{checked: isChecked}" ng-repeat ="row in nightingale | reverse">
+                <span class="box" ng-class="box.stitch" ng-repeat = "box in row.pattern track by $index" ng-mousedown="startCount($index)" ng-mouseup="stopCount($index)">{{box.value}}</span><input type="checkbox" ng-model="isChecked">
+            </div>
+        </div>
     </main>
 </body>
 </html>

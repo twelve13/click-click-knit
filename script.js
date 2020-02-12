@@ -592,6 +592,13 @@ angular
 
                                 }
 
- 
+    let close = document.querySelector("#close");
+    let instructions = document.querySelector("#instructions");
+
+    function closeInstructions() {
+        instructions.classList.add("hide-instructions");
+    }
+
+    close.addEventListener("click", closeInstructions); 
 
 };
